@@ -48,6 +48,14 @@ window.addEventListener('scroll', () => {
 
             itemMenu.forEach((element) => {
                 element.style.color = "#f9f9fc";
+
+                element.addEventListener('mouseenter', () => {
+                    element.style.color = '#ffe8e2'; // couleur au survol
+                });
+
+                element.addEventListener('mouseleave', () => {
+                    element.style.color = '#f9f9fc'; // couleur normale
+                });
             });
 
             headerMobile.style.backgroundColor = "#f9f9fc00";
@@ -57,11 +65,20 @@ window.addEventListener('scroll', () => {
 
             itemMenu.forEach((element) => {
                 element.style.color = "#262626";
+
+                element.addEventListener('mouseenter', () => {
+                    element.style.color = '#afa2b9'; // couleur au survol
+                });
+
+                element.addEventListener('mouseleave', () => {
+                    element.style.color = '#262626'; // couleur normale
+                });
             });
 
             headerMobile.style.backgroundColor = "#f9f9fc";
             document.querySelector('.logo-coeur').src = "/medias/logo - coeur - pour svg.svg";
             document.querySelector('.nom-salon--header').style.color = "#262626";
+
         }
     }
 

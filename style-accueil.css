@@ -54,6 +54,11 @@ h3{
     transition: 0.15s ease;
 }
 
+.header--mobile a,
+footer a{
+  text-decoration: none;
+}
+
 .header__logo{
     width: auto;
     display: flex;
@@ -344,7 +349,7 @@ h3{
 }
 
 footer{
-  height: 393px;
+  height: 300px;
   background-color: var(--blanc-casse);
 
   display: flex;
@@ -506,10 +511,20 @@ footer .footer__logo--nom-salon .nom-salon--footer{
 
   .photo{
     display: block;
+    width: 80%;
   }
 
   footer{
     display: flex;
   }
+
+    /* .header--mobile a:hover, */
+    footer .menu-footer ul li a:hover{
+      color: var(--gris-lavande);
+    }
     
+    .item-menu:hover{
+      color: var(--rose-poudre);
+    }
+   
 }

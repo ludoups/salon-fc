@@ -55,6 +55,11 @@ h3{
     transition: 0.15s ease;
 }
 
+.header--mobile a,
+footer a{
+  text-decoration: none;
+}
+
 .header__logo{
     width: auto;
     display: flex;
@@ -182,7 +187,7 @@ body{
 
 
 footer{
-  height: 393px;
+  height:00px;
   background-color: var(--charbon-fonce);
 
   display: flex;
@@ -434,6 +439,11 @@ footer .footer__logo--nom-salon .nom-salon--footer{
 
   footer{
     display: flex;
+  }
+
+  .header--mobile a:hover,
+  footer .menu-footer ul li a:hover{
+    color: var(--rose-poudre);
   }
     
 }
