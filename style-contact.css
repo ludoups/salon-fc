@@ -1,0 +1,678 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+}
+
+:root{
+    --gris-lavande : #afa2b9;
+    --blanc-casse : #f9f9fc;
+    --violet-fonce : #672360;
+    --charbon-fonce : #262626;
+    --rose-poudre : #ffe8e2;
+}
+
+h1{
+    font-family: "Zen Loop", sans-serif;
+    font-size: 64px;
+    color: var(--gris-lavande);
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--charbon-fonce  );
+
+    /* margin: 11px 0 11px 0; */
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 350;
+    font-style: italic;
+    color: var(--blanc-casse);
+
+    /* margin: 11px 0 11px 0; */
+}
+
+.header--mobile{
+    background-color: var(--blanc-casse);
+    min-height: 110px;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+
+    transition: 0.15s ease;
+}
+
+.header__logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__logo img{
+    height: 40px;
+    width: auto;
+}
+
+.menu-icon{
+    font-size: 50px;
+    color: var(--charbon-fonce);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--gris-lavande); /* ou autre couleur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+
+  color: var(--blanc-casse);
+  font-weight: bolder;
+}
+
+.menu-overlay ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-overlay li {
+  margin: 20px 0;
+}
+
+.menu-overlay a {
+  text-decoration: none;
+  font-family: "Zen Loop", sans-serif;
+  font-size: 96px;
+  color: var(--blanc-casse);
+}
+
+.nom-salon--header{
+    font-family: "Zen Loop", sans-serif;
+    font-size: 40px;
+    color: var(--charbon-fonce);
+}
+
+body{
+    background-image: url('/medias/motif\ en\ quatre\ -\ blanc.svg');
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+.galerie{
+    width: 100%;
+    min-height: 500px;
+
+    padding: 160px 16px 50px 16px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.remerciement{
+    background-color: var(--blanc-casse);
+
+    text-align: center;
+
+    margin-bottom: 20px;
+    padding: 5px 8px;
+}
+
+.titre-page{
+    background-color: var(--blanc-casse);
+    border: solid 3px var(--gris-lavande);
+    margin-bottom: 50px;
+    /* margin-top: 160px; */
+
+    display: inline-block;
+
+    padding: 10px 30px 10px 30px;
+}
+
+/* .photo{
+    background-color: var(--gris-lavande);
+    margin-bottom: 20px;
+    padding: 18px;
+    width: 100%;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+} */
+
+.photo img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.photo-maps iframe{
+    width: 100%;
+    height: 60vh;
+}
+
+.photo p{
+    /* background-color: var(--gris-lavande); */
+    color: var(--blanc-casse);
+    width: 100%;
+    margin-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* .photo-maps{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  border: solid 2px red;
+} */
+
+.photo-maps p{
+  margin-top: 8px;
+}
+
+.photo-maps p.parag-carte--desktop{
+  display: none;
+}
+
+.photo-maps p.parag-carte--mobile{
+  text-align: center;
+  display: block;
+}
+
+/* .btn-contact{
+    background-color: var(--violet-fonce);
+    width: 100%;
+    border-radius: 10px;
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+} */
+
+.btn-contact{
+    background-color: var(--violet-fonce);
+    width: 100%;
+    border-radius: 10px;
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--blanc-casse);
+}
+
+/* .btn-contact a{
+    text-decoration: none;
+}
+
+.contact{
+    color: var(--blanc-casse);
+    font-size: 24px;
+    font-weight: 900;
+
+    margin: 14px;
+} */
+
+.btn-contact:hover {
+  background-color: var(--rose-poudre);
+  border: 0;
+  color: var(--charbon-fonce);
+}
+
+.contact{
+    font-size: 24px;
+    font-weight: 900;
+
+    margin: 14px;
+}
+
+.ouverture-salon--desktop{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bleu{
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+
+  /* transform: translateY(60px); */
+  margin-top: 60px;
+
+  display: none;
+}
+
+.photo{
+    background-color: var(--gris-lavande);
+    margin-bottom: 20px;
+    padding: 18px;
+
+    height: 420px;
+    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    margin-top: 60px;
+
+    display: none;
+}
+
+.photo-maps{
+    background-color: var(--gris-lavande);
+    margin-bottom: 20px;
+    padding: 18px;
+
+    /* height: 420px; */
+    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    /* margin-top: 60px; */
+
+    /* display: none; */
+    /* border: solid 2px red; */
+}
+
+.photo img{
+    width: 100%;
+    height: 45%;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.photo .image-agenda{
+  width: 100%;
+  height: 45%;
+  display: block;
+  margin-bottom: 18px;
+  /* background-color: aquamarine; */
+  background-image: url('/medias/agenda.webp');
+  background-size: cover;
+}
+
+.photo h2{
+  color: var(--blanc-casse);
+}
+
+.photo p{
+    /* background-color: var(--gris-lavande); */
+    color: var(--blanc-casse);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* border: solid; */
+}
+
+.photo-maps h2{
+  color: var(--blanc-casse);
+}
+
+.photo-maps p{
+    color: var(--blanc-casse);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ouverture-salon{
+    background-color:var(--blanc-casse);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jours-ouverts{
+    background-color:var(--gris-lavande);
+    border-top: solid 1px var(--blanc-casse);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ouverture-salon--horaire{
+    width: 100%;
+    min-height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.jours-et-heures{
+    background-color: var(--gris-lavande);
+    border-top: solid 1px var(--blanc-casse);
+    width: 100%;
+    min-height: 60px;
+    padding: 11px;
+
+    color: var(--blanc-casse);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adresse,
+.mail{
+    background-color: var(--blanc-casse);
+    width: 100%;
+
+    margin: 50px;
+    padding: 11px;
+
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* max-width: 500px; */
+  margin: auto;
+  padding: 8px;
+
+  background-color: var(--blanc-casse);
+  width: 100%;
+}
+
+.formulaire label {
+  font-weight: bold;
+
+  width: 100%;
+}
+
+.formulaire input,
+.formulaire textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+
+  width: 100%;
+}
+
+.formulaire button {
+    background-color: var(--violet-fonce);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    color: var(--blanc-casse);
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.formulaire button:hover {
+  background-color: var(--rose-poudre);
+  color: var(--charbon-fonce);
+  border: 0;
+}
+
+#message{
+    margin-top: 18px;
+}
+
+.mentions-legales{
+    margin-top: 30px;
+    padding: 5px;
+    color: var(--violet-fonce);
+
+    background-color: var(--blanc-casse);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-formulaire{
+  width: 100%;
+  background-color: aqua;
+}
+
+footer{
+  height: 393px;
+  background-color: var(--blanc-casse);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  display: none;
+}
+
+footer .menu-footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+footer .menu-footer ul li{
+  list-style-type: none;
+}
+
+footer .menu-footer ul li a{
+  color: var(--charbon-fonce);
+  text-decoration: none;
+  list-style-type: none;
+}
+
+footer h2{
+  font-size: 48px;
+  color: var(--charbon-fonce);
+  text-align: center;
+}
+
+footer p{
+  font-size: 24px;
+  color: var(--charbon-fonce);
+  text-align: center;
+}
+
+footer .coordonnees{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer__logo{
+  display: flex;
+  align-items: center;
+}
+
+footer .footer__logo--nom-salon .nom-salon--footer{
+  font-family: "Zen Loop", sans-serif;
+  font-size: 96px;
+}
+
+/******************************************************/
+
+@media (min-width: 1024px) {
+    .header__logo{
+        display: block;
+    }
+
+    .accueil{
+        flex-direction: row-reverse;
+    }
+
+    .carre1{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .carre2{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+
+    .double-arrow{
+        /* display: none; */
+        position: absolute;
+        top: 90vh;
+    }
+
+    /********************/
+
+      .menu-icon {
+    display: none; /* Cache le burger en desktop */
+  }
+
+  .menu-overlay {
+    position: static;
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+    transform: none;
+    transition: none;
+    padding: 0;
+  }
+
+  .menu-overlay ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-overlay li a {
+    text-decoration: none;
+    /* color: inherit; */
+    font-weight: bold;
+
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: var(--charbon-fonce);
+}
+
+  .close-btn {
+    display: none; /* Cache le bouton de fermeture */
+  }
+
+  .header--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__logo--nom-salon p{
+    color: var(--charbon-fonce);
+  }
+
+
+  .btn-contact,
+  .formulaire button {
+    width: 424px;
+  }
+  
+  .formulaire{
+    width: 833px;
+    align-items: end;
+  }
+
+  .photo-maps p.parag-carte--desktop{
+    display: block;
+  }
+
+  .photo-maps p.parag-carte--mobile{
+    display: none;
+  }
+
+  .ouverture-salon--desktop{
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .bleu{
+    display: block;
+  }
+
+  .photo{
+    display: block;
+  }
+  
+  footer{
+    display: flex;
+  }
+
+}

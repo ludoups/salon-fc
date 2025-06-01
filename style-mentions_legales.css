@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+}
+
+:root{
+    --gris-lavande : #afa2b9;
+    --blanc-casse : #f9f9fc;
+    --violet-fonce : #672360;
+    --charbon-fonce : #262626;
+    --rose-poudre : #ffe8e2;
+}
+
+h1{
+    font-family: "Zen Loop", sans-serif;
+    font-size: 64px;
+    color: var(--blanc-casse);
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--charbon-fonce);
+
+    text-align: center;
+
+    margin-bottom: 18px;
+    /* margin: 11px 0 11px 0; */
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 350;
+    font-style: italic;
+    color: var(--blanc-casse);
+
+    /* margin: 11px 0 11px 0; */
+}
+
+.header--mobile{
+    background-color: var(--charbon-fonce);
+    min-height: 110px;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+
+    transition: 0.15s ease;
+}
+
+.header__logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__logo img{
+    height: 40px;
+    width: auto;
+}
+
+.menu-icon{
+    font-size: 50px;
+    color: var(--blanc-casse);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--gris-lavande); /* ou autre couleur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+
+  color: var(--blanc-casse);
+  font-weight: bolder;
+}
+
+.menu-overlay ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-overlay li {
+  margin: 20px 0;
+}
+
+.menu-overlay a {
+  text-decoration: none;
+  font-family: "Zen Loop", sans-serif;
+  font-size: 96px;
+  color: var(--blanc-casse);
+}
+
+.nom-salon--header{
+    font-family: "Zen Loop", sans-serif;
+    font-size: 40px;
+    color: var(--blanc-casse);
+}
+
+body{
+    background-image: url('/medias/motif\ en\ quatre\ -\ noir.svg');
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+.galerie{
+    width: 100%;
+    min-height: 500px;
+
+    padding: 160px 16px 50px 16px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre-page{
+    background-color: var(--charbon-fonce);
+    border: solid 3px var(--blanc-casse);
+    margin-bottom: 50px;
+    /* margin-top: 160px; */
+
+    display: inline-block;
+
+    padding: 10px 30px 10px 30px;
+}
+
+.mentions-legales{
+    background-color: var(--charbon-fonce);
+    margin: 8px;
+    padding: 16px;
+}
+
+.mentions-legales p{
+    color: var(--blanc-casse);
+}
+
+/* .photo{
+    background-color: var(--blanc-casse);
+    margin-bottom: 20px;
+    padding: 18px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.photo img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 18px;
+} */
+
+
+footer{
+  height: 393px;
+  background-color: var(--charbon-fonce);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  display: none;
+}
+
+footer .menu-footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+footer .menu-footer ul li{
+  list-style-type: none;
+}
+
+footer .menu-footer ul li a{
+  color: var(--blanc-casse);
+  text-decoration: none;
+  list-style-type: none;
+}
+
+footer h2{
+  font-size: 48px;
+  color: var(--blanc-casse);
+  text-align: center;
+}
+
+footer p{
+  font-size: 24px;
+  color: var(--blanc-casse);
+  text-align: center;
+}
+
+footer .coordonnees{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer__logo{
+  display: flex;
+  align-items: center;
+}
+
+footer .footer__logo--nom-salon .nom-salon--footer{
+  font-family: "Zen Loop", sans-serif;
+  font-size: 96px;
+}
+
+
+/******************************************************/
+
+@media (min-width: 1024px) {
+    .header__logo{
+        display: block;
+    }
+
+    .accueil{
+        flex-direction: row-reverse;
+    }
+
+    .carre1{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .carre2{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+
+    .double-arrow{
+        /* display: none; */
+        position: absolute;
+        top: 90vh;
+    }
+
+    /********************/
+
+      .menu-icon {
+    display: none; /* Cache le burger en desktop */
+  }
+
+  .menu-overlay {
+    position: static;
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+    transform: none;
+    transition: none;
+    padding: 0;
+  }
+
+  .menu-overlay ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-overlay li a {
+    text-decoration: none;
+    /* color: inherit; */
+    font-weight: bold;
+
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: var(--blanc-casse);
+}
+
+  .close-btn {
+    display: none; /* Cache le bouton de fermeture */
+  }
+
+  .header--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__logo--nom-salon p{
+    color: var(--blanc-casse);
+  }
+    
+}
+
+
+/******************************************************/
+
+@media (min-width: 1024px) {
+    .header__logo{
+        display: block;
+    }
+
+    .accueil{
+        flex-direction: row-reverse;
+    }
+
+    .carre1{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .carre2{
+        width: 50%;
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+
+    .double-arrow{
+        /* display: none; */
+        position: absolute;
+        top: 90vh;
+    }
+
+    /********************/
+
+      .menu-icon {
+    display: none; /* Cache le burger en desktop */
+  }
+
+  .menu-overlay {
+    position: static;
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+    transform: none;
+    transition: none;
+    padding: 0;
+  }
+
+  .menu-overlay ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-overlay li a {
+    text-decoration: none;
+    /* color: inherit; */
+    font-weight: bold;
+
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: var(--blanc-casse);
+}
+
+  .close-btn {
+    display: none; /* Cache le bouton de fermeture */
+  }
+
+  .header--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__logo--nom-salon p{
+    color: var(--blanc-casse);
+  }
+
+  footer{
+    display: flex;
+  }
+    
+}
