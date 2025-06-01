@@ -167,7 +167,7 @@ footer a{
 
 .carre2{
     /* background-color: plum; */
-    background-image: url('/medias/model-homme.webp');
+    background-image: url('medias/model-homme.webp');
     background-size: cover;
     background-position: top;
     width: 100%;
@@ -185,7 +185,7 @@ footer a{
 }
 
 .services{
-    background-image: url('/medias/motif\ en\ quatre\ -\ blanc.svg');
+    background-image: url('medias/motif\ en\ quatre\ -\ blanc.svg');
     background-size: 50%;
     background-repeat: repeat;
     /* background-color: lightgray; */
