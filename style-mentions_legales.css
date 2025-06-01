@@ -187,7 +187,7 @@ body{
 
 
 footer{
-  height:00px;
+  height: 300px;
   background-color: var(--charbon-fonce);
 
   display: flex;

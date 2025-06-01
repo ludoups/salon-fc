@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
             headerMobile.style.backgroundColor = "#f9f9fc";
             menuIcon.style.color = '#262626';
             menuIcon.style.backgroundColor = '#f9f9fc';
-            document.querySelector('.logo-coeur').src = "/medias/logo - coeur - pour svg.svg";
+            document.querySelector('.logo-coeur').src = "medias/logo - coeur - pour svg.svg";
             document.querySelector('.nom-salon--header').style.color = "#262626";
         }else if(scrollY >= (top+50)){
             // situation = "header courant";
@@ -42,7 +42,7 @@ window.addEventListener('scroll', () => {
 
             headerLogo.style.display = 'flex';
             headerMobile.style.justifyContent = "space-between";
-            document.querySelector('.logo-coeur').src = "/medias/logo - coeur blanc - pour svg.svg";
+            document.querySelector('.logo-coeur').src = "medias/logo - coeur blanc - pour svg.svg";
 
             const itemMenu = document.querySelectorAll('.item-menu');
 
@@ -76,7 +76,7 @@ window.addEventListener('scroll', () => {
             });
 
             headerMobile.style.backgroundColor = "#f9f9fc";
-            document.querySelector('.logo-coeur').src = "/medias/logo - coeur - pour svg.svg";
+            document.querySelector('.logo-coeur').src = "medias/logo - coeur - pour svg.svg";
             document.querySelector('.nom-salon--header').style.color = "#262626";
 
         }
