@@ -146,7 +146,7 @@ h3{
 
 .carre1{
     /* background-color: purple; */
-    background-image: url('/medias/modele-femme.jpg');
+    background-image: url('medias/modele-femme.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -162,7 +162,7 @@ h3{
 
 .carre2{
     /* background-color: plum; */
-    background-image: url('/medias/modele-homme.jpg');
+    background-image: url('/medias/model-homme.webp');
     background-size: cover;
     background-position: top;
     width: 100%;
