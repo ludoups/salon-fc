@@ -149,6 +149,13 @@ footer a{
     color: var(--charbon-fonce);
 }
 
+/* main {
+  width: 100%;
+  max-width: 1728px;
+  margin: 0;
+  padding: 0;
+} */
+
 .carre1{
     /* background-color: purple; */
     background-image: url('medias/modele-femme.webp');
@@ -185,6 +192,8 @@ footer a{
 }
 
 .services{
+    /* max-width: 1728px; */
+
     background-image: url('medias/motif\ en\ quatre\ -\ blanc.svg');
     background-size: 50%;
     background-repeat: repeat;
@@ -211,6 +220,8 @@ footer a{
 }
 
 .services--desktop{
+  max-width: 1728px;
+
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -161,6 +161,8 @@ body{
 }
 
 .photo{
+    max-width: 1728px;
+
     background-color: var(--blanc-casse);
     margin-bottom: 20px;
     padding: 18px;

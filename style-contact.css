@@ -302,6 +302,8 @@ body{
 }
 
 .photo-maps{
+    width: 100%;
+
     background-color: var(--gris-lavande);
     margin-bottom: 20px;
     padding: 18px;
@@ -329,7 +331,7 @@ body{
   display: block;
   margin-bottom: 18px;
   /* background-color: aquamarine; */
-  background-image: url('/medias/agenda.webp');
+  background-image: url('medias/agenda.webp');
   background-size: cover;
 }
 
@@ -654,6 +656,10 @@ footer .footer__logo--nom-salon .nom-salon--footer{
     align-items: end;
   }
 
+  .photo-maps{
+    max-width: 1728px;
+  }
+
   .photo-maps p.parag-carte--desktop{
     display: block;
   }
@@ -663,6 +669,9 @@ footer .footer__logo--nom-salon .nom-salon--footer{
   }
 
   .ouverture-salon--desktop{
+    max-width: 1728px;
+    width: 100%;
+
     flex-direction: row;
     align-items: start;
     gap: 10px;
